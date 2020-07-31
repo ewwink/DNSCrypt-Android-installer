@@ -1,5 +1,6 @@
 #!/system/bin/sh
 #Script to enable init.d by Ryuinferno @ XDA
+# Script dnscrypt installer by ewwink
 
 error_msg(){
 echo "You do not need this mod..."
@@ -252,19 +253,24 @@ cp -r android-arm /data/local/dnscrypt
 chmod +x /data/local/dnscrypt/dnscrypt-proxy
 chown 0.0 /data/local/dnscrypt/dnscrypt-proxy
 
+echo "Instalasi DNSCrypt Selesai!"
+echo ""
 sleep 1
+
 echo ""
 echo "Mounting system as read-only..."
 mount -o remount,ro -t auto /system
 sleep 1
 echo ""
-echo "Done!!!"
+echo "Selesai!!!"
 sleep 1
-echo "Please reboot at least twice before checking /data..."
+echo "Silahkan reboot setidaknya 2 kali sebelum cek file log di /data..."
 sleep 1
-echo "If init.d is working, you will see a Test.log in /data..."
+echo "Jika init.d berhasil, kamu akan melihat Test.log di /data..."
 sleep 1
 echo ""
 echo "Enjoy!!! =)"
 echo "Ryuinferno @ XDA 2013"
+echo ""
+echo "ewwink @ 2020"
 exit

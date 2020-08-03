@@ -7,7 +7,7 @@ if [ -f /data/dnscrypt-test.log ]; then
 rm  /data/dnscrypt-test.log
 fi
 
-/data/local/dnscrypt-arm/dnscrypt-proxy > /dev/null 2>&1 &
+/data/local/dnscrypt/dnscrypt-proxy > /dev/null 2>&1 &
 
 #redirect dns query trafik ke localhost/dnscrypt
 iptables -t nat -A OUTPUT -p udp --dport 53 -j DNAT --to-destination 127.0.0.1

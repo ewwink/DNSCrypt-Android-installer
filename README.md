@@ -36,12 +36,17 @@ Untuk `DNSCrypt`, jalankan perintah
 
     ps | grep dnscrypt
     
- kalau ada pesan seperti berikut berarti berhasil
+Kalau ada pesan seperti berikut berarti berhasil
  
-    root 5630 1 816664 10408 futex_wait ab06db84 S /data/local/dnscrypt-arm/dnscrypt-proxy
+    root 5630 1 816664 10408 futex_wait ab06db84 S /data/local/dnscrypt/dnscrypt-proxy
 
+Cek apa dnscrypt sudah berjalan dengan benar, jalankan perintah berikut di adb shell atau terminal emulator
+
+    /data/local/dnscrypt/dnscrypt-proxy -resolve WebYgDiBlokir.com
+    
 ## Permasalahan
 - Ada pesan error  `...applet NOT FOUND!` install busybox dan jalankan kembali scriptnya.
+- tidak bisa buka website apapun atau dnscrypt tidak berjalan tapi ada file `/data/dnscrypt-test.log`, Cek tanggal di STB/perangkat
 - DNS koneknya terasa lambat... edit `dnscrypt-proxy.toml`.... cape nulis bersambung.....
 
 **Credit**

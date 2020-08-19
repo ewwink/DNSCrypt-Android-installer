@@ -226,7 +226,7 @@ echo "" >> /system/etc/init.d/00test
 echo 'echo "Init.d is working !!!" >> /data/Test.log' >> /system/etc/init.d/00test
 echo 'echo "excecuted on $(date +"%d-%m-%Y %r" )" >> /data/Test.log' >> /system/etc/init.d/00test
 echo "" >> /system/etc/init.d/00test
-echo "/system/bin/run-dnscrypt.sh > /dev/null 2>&1 &" >> /system/etc/init.d/00test
+echo "/system/bin/run-dnscrypt > /dev/null 2>&1 &" >> /system/etc/init.d/00test
 echo "" >> /system/etc/init.d/00test
 
 sleep 1
